@@ -1,35 +1,47 @@
-document.addEventListener('DOMContentLoaded', function() {
+document.addEventListener('DOMContentLoaded', function () {
   const menuToggle = document.querySelector('.mobile-menu-toggle');
   const mobileMenu = document.querySelector('.mobile-menu');
   const closeBtn = document.querySelector('.mobile-close-btn');
+
+  // Create and append overlay
   const overlay = document.createElement('div');
   overlay.className = 'menu-overlay';
   document.body.appendChild(overlay);
 
-  // Toggle menu
-  menuToggle.addEventListener('click', function() {
-    this.classList.toggle('active');
-    mobileMenu.classList.toggle('active');
-    overlay.classList.toggle('active');
-    document.body.style.overflow = 'hidden';
-  });
-
-  // Close menu
+  // Close menu function
   function closeMenu() {
-    menuToggle.classList.remove('active');
-    mobileMenu.classList.remove('active');
+    if (menuToggle) menuToggle.classList.remove('active');
+    if (mobileMenu) mobileMenu.classList.remove('active');
     overlay.classList.remove('active');
     document.body.style.overflow = '';
   }
 
-  closeBtn.addEventListener('click', closeMenu);
+  // Toggle menu
+  if (menuToggle && mobileMenu) {
+    menuToggle.addEventListener('click', function () {
+      this.classList.toggle('active');
+      mobileMenu.classList.toggle('active');
+      overlay.classList.toggle('active');
+      document.body.style.overflow = 'hidden';
+    });
+  }
+
+  // Close menu via close button
+  if (closeBtn) {
+    closeBtn.addEventListener('click', closeMenu);
+  }
+
+  // Close menu via overlay click
   overlay.addEventListener('click', closeMenu);
 
-  // Close when clicking menu links
+  // Close menu when clicking any mobile menu link
   document.querySelectorAll('.mobile-menu a').forEach(link => {
     link.addEventListener('click', closeMenu);
   });
 });
+
+
+// FAQ toggle script
 document.addEventListener('DOMContentLoaded', () => {
   document.querySelectorAll('.faq-question').forEach((item) => {
     item.addEventListener('click', () => {

@@ -14,14 +14,29 @@ body {
 /* Navbar */
 .navbar {
   display: flex;
-  justify-content: space-between;
   align-items: center;
+  justify-content: space-between;
   padding: 20px 40px;
   background-color: #fff;
   border-bottom: 1px solid #eaeaea;
   box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
   position: relative;
 }
+
+/* New wrapper to control layout */
+.nav-left,
+.desktop-nav,
+.nav-buttons {
+  flex: 1;
+}
+
+/* Centering nav menu */
+.desktop-nav {
+  display: flex;
+  justify-content: center;
+}
+
+
 
 .nav-left .logo-img {
   height: 45px;
@@ -32,6 +47,7 @@ body {
   display: flex;
   align-items: center;
   gap: 40px;
+  flex: 1.5;
 }
 
 .nav-menu {
@@ -52,10 +68,11 @@ body {
   color: #6C63FF;
 }
 
-/* Buttons */
 .nav-buttons {
   display: flex;
+  justify-content: flex-end;
   gap: 15px;
+  flex: 1;
 }
 
 .btn {
@@ -155,12 +172,39 @@ body {
   margin-top: 20px;
 }
 
+/* Mobile Button Styles */
 .mobile-btn {
-  padding: 10px 20px;
+  padding: 8px 18px;
   border-radius: 25px;
   font-size: 14px;
+  font-weight: 500;
   text-align: center;
-  flex: 1;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  text-decoration: none;
+}
+
+/* Outline Button (mobile) */
+.mobile-btn.outline {
+  border: 1.5px solid #6C63FF;
+  color: #6C63FF;
+  background-color: transparent;
+}
+
+.mobile-btn.outline:hover {
+  background-color: #6C63FF;
+  color: #fff;
+}
+
+/* Solid Button (mobile) */
+.mobile-btn.solid {
+  background-color: #4C4CFF;
+  color: #fff;
+  border: none;
+}
+
+.mobile-btn.solid:hover {
+  background-color: #3333cc;
 }
 
 /* Responsive Styles */
@@ -208,6 +252,7 @@ body {
     transform: translate(-6px, -6px);
   }
 }
+
 /* Hero Section */
 .hero {
   padding: 60px 20px;
@@ -339,7 +384,7 @@ section.logos-section {
 }
 
 .company-logos.first-line {
-  margin-bottom: 30px; /* Adds spacing between the two rows */
+  margin-bottom: 30px; 
 }
 
 .logo img {
@@ -350,18 +395,29 @@ section.logos-section {
 
 .logo img:hover {
   filter: grayscale(0%);
-  transform: scale(1.1); /* Slight zoom effect on hover */
+  transform: scale(1.1); 
 }
 /*Features section styling*/
 .features-section{
   
-  background-color: #FFFFFF; /* White background for contrast */
+  background-color: #FFFFFF; 
 }
-p.subheading {
+p.suubheading {
   font-size: 0.9rem; 
-  color: #007bff; /* Blue font color */
-  text-align: center;
+  color: #007bff; 
+  text-align: center; 
   margin-bottom: 10px;
+  font-weight: bold;
+  display: inline-flex; /* Changed to inline-flex */
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  min-width: 127px; /* Changed to min-width */
+  width: auto; /* Allows content to determine width */
+  height: 28px;
+  background: #EEF2FF;
+  border-radius: 1234px;
+  white-space: nowrap; 
 }
 
 .features-section {
@@ -397,7 +453,7 @@ p.subheading {
 .features-grid {
   display: grid;
   grid-template-columns: repeat(3, 1fr); /* Ensures three items per row */
-  gap: 20px; /* Adjusts spacing between items */
+  gap: 20px; 
   text-align: center;
 }
 
@@ -408,7 +464,7 @@ p.subheading {
 }
 
 .feature-item i {
-  color: #007bff; /* Adjust icon color */
+  color: #007bff; 
   margin-bottom: 15px;
 }
 
@@ -436,7 +492,7 @@ p.subheading {
 }
 
 .achievement-icon i {
-  color: #007bff; /* Icon color */
+  color: #007bff;
 }
 
 .achievement-headline {
@@ -472,7 +528,7 @@ p.subheading {
 
 .metric-item h3 {
   font-size: 2rem;
-  color: #007bff; /* Metric values in blue */
+  color: #007bff; 
   margin-bottom: 5px;
 }
 
@@ -483,10 +539,10 @@ p.subheading {
 
 /**** Divider Styling ****/
 .metric-divider {
-  width: 2px; /* Thickness of the divider */
-  background-color: rgba(203, 213, 225, 1); /* Blue color to match theme */
-  height: 80px; /* Height of the divider */
-  margin: 0 15px; /* Space around the divider */
+  width: 2px; 
+  background-color: rgba(203, 213, 225, 1); 
+  height: 80px; 
+  margin: 0 15px; 
 }
 /* Responsive Adjustments */
 @media (max-width: 768px) {
@@ -562,11 +618,21 @@ p.subheading {
 }
 
 .who-is-it-for {
-  color: #1E90FF;
-  font-size: 1.2rem;
+  font-size: 0.9rem; 
+  color: #007bff;
   font-weight: bold;
   margin-bottom: 10px;
   text-align: left;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  min-width: 127px;
+  width: auto; 
+  height: 28px;
+  background: #EEF2FF;
+  border-radius: 1234px;
+  white-space: nowrap; 
 }
 
 .top-content h2 {
@@ -575,6 +641,7 @@ p.subheading {
   color: #333;
   margin-bottom: 20px;
   text-align: left;
+  
 }
 
 p.subheading {
@@ -597,10 +664,10 @@ p.subheading {
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  padding: 0px 0px 0px 5px; /* Add left padding */
-  gap: 60px; /* More gap between testimonial items */
+  padding: 0px 0px 0px 5px; 
+  gap: 60px; 
   width: 50px;
-  height: auto; /* Changed to auto to fit content */
+  height: auto;
   flex: none;
   order: 0;
   flex-grow: 1;
@@ -749,11 +816,21 @@ p.subheading {
 }
 
 .top-text {
-  font-size: 14px;
-  color: #4F46E5;
   font-weight: 600;
-  text-transform: uppercase;
-  letter-spacing: 0.05em;
+  font-size: 14px;
+  line-height: 20px;
+  color: #4F46E5;
+  display: inline-block;
+  display: inline-flex; 
+  justify-content: center;
+  align-items: center;
+  padding: 4px 10px;
+  min-width: 127px;
+  width: auto; 
+  height: 28px;
+  background: #EEF2FF;
+  border-radius: 1234px;
+  white-space: nowrap; 
 }
 
 .testimonial-wrapper {
@@ -874,7 +951,7 @@ p.subheading {
   font-size: 2.5rem;
   font-weight: 800;
   line-height: 40px;
-  color: #1E293B; /* Using Gray/80 */
+  color: #1E293B; 
   margin-bottom: 10px;
 }
 
@@ -926,7 +1003,7 @@ p.subheading {
 .office-card .icon {
   width: 24px;
   height: 24px;
-  color: #4F46E5; /* Brand color */
+  color: #4F46E5; 
   display: flex;
   justify-content: center;
   align-items: center;
@@ -959,39 +1036,6 @@ p.subheading {
     grid-template-columns: repeat(4, 1fr);
   }
 }
-
-/* Additional Styles for the Chat Section (if needed) */
-.live-chat-section {
-  display: flex;
-  flex-direction: column;
-  gap: 8px;
-  width: 232px;
-  height: 88px;
-  padding: 0;
-  background-color: #fff;
-}
-
-.live-chat-section .live-chat-title {
-  width: 232px;
-  height: 28px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 800;
-  font-size: 20px;
-  line-height: 28px;
-  color: #1E293B; /* Gray/80 */
-  letter-spacing: -0.01em;
-}
-
-.live-chat-section .live-chat-description {
-  width: 232px;
-  height: 52px;
-  font-family: 'Plus Jakarta Sans', sans-serif;
-  font-weight: 400;
-  font-size: 16px;
-  line-height: 160%;
-  color: #1E293B; /* Gray/80 */
-}
-
 
 /* Responsive Design */
 @media (min-width: 640px) {
@@ -1038,7 +1082,7 @@ p.subheading {
   display: inline-block; /* Ensures single line */
 }
 
-/* Content - Exact Figma Specs */
+
 .contact-content {
   display: flex;
   flex-direction: column;
@@ -1240,7 +1284,7 @@ p.subheading {
   color: #6c63ff;
 }
 
-/* App Section - Original Styling Preserved */
+/* App Section */
 .app-section {
   padding: 80px 20px;
   background-color: #EEF2FF;
@@ -1263,14 +1307,14 @@ p.subheading {
   max-width: 600px;
 }
 
-/* Images container - Original Positioning */
+/* Images container*/
 .app-images {
   flex: 1 1 400px;
   position: relative;
   min-height: 550px;
 }
 
-/* FIRST image - Original Positioning Preserved */
+/* FIRST image */
 .first-image {
   position: absolute;
   left: -150px;
@@ -1279,7 +1323,7 @@ p.subheading {
   z-index: 1;
 }
 
-/* SECOND image - Original Positioning Preserved */
+/* SECOND image */
 .second-image {
   position: absolute;
   right: 200px;
@@ -1288,7 +1332,7 @@ p.subheading {
   z-index: 1;
 }
 
-/* Content styles - Original Typography */
+/* Content styles*/
 .app-title {
   font-size: 2.5rem;
   margin-bottom: 20px;
@@ -1331,7 +1375,7 @@ p.subheading {
   color: white;
 }
 
-/* Enhanced Responsive Handling Without Changing Original Styles */
+/* Enhanced Responsive */
 @media (max-width: 1200px) {
   .first-image {
     left: -100px;
@@ -1466,7 +1510,7 @@ p.subheading {
 }
 
 .footer-logo {
-  width: 32px;
+  width: 90px;
   height: 32px;
 }
 
@@ -1526,7 +1570,7 @@ p.subheading {
   }
 
   .footer-logo {
-    width: 24px;
+    width: 60px;
     height: 24px;
   }
 
