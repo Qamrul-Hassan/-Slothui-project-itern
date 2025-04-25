@@ -1396,7 +1396,6 @@ p.subheading {
   }
 }
 
-/* Footer Section */
 /* Footer Styles */
 .footer-section {
   padding: 96px 112px;
@@ -1405,14 +1404,14 @@ p.subheading {
 }
 
 .footer-container {
-  max-width: 1480px;
+  max-width: 1440px;
   margin: 0 auto;
 }
 
 .footer-nav {
   display: flex;
-  gap: 32px;
-  margin-bottom: 42px;
+  gap: 5px;
+  margin-bottom: 15px;
   flex-wrap: wrap;
 }
 
@@ -1453,21 +1452,22 @@ p.subheading {
 
 .footer-bottom {
   display: flex;
-  justify-content: space-between;
+  justify-content: space-between; 
   align-items: center;
   padding-top: 32px;
   border-top: 1px solid #CBD5E1;
+  
 }
 
 .footer-brand {
   display: flex;
   align-items: center;
-  gap: 1000px;
+  gap: 8px;
 }
 
 .footer-logo {
-  width: 100px;
-  height: 40px;
+  width: 32px;
+  height: 32px;
 }
 
 .copyright {
@@ -1478,7 +1478,7 @@ p.subheading {
   color: #94A3B8;
 }
 
-/* Footer Button (optional for adding action button) */
+
 .footer-button {
   width: 48px;
   height: 48px;
@@ -1504,8 +1504,15 @@ p.subheading {
   
   .footer-bottom {
     flex-direction: column;
-    align-items: flex-start;
-    gap: 24px;
+    align-items: center;
+    gap: 12px;
+    text-align: center;
+  }
+
+  .footer-brand {
+    flex-direction: column;
+    align-items: center;
+    gap: 12px;
   }
 }
 
@@ -1522,4 +1529,11 @@ p.subheading {
     width: 24px;
     height: 24px;
   }
+
+  .footer-bottom {
+    text-align: center;
+  }
 }
+
+
+
