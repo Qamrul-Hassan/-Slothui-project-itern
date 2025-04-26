@@ -1608,7 +1608,7 @@ p.subheading {
   margin-right: 12px;
 }
 
-/* Updated Toggle Arrow Styling: No <i> tag needed */
+/*Arrow icon styles*/
 .faq-toggle {
   transition: transform 0.3s ease;
   color: #9ca3af;
@@ -1631,115 +1631,171 @@ p.subheading {
   display: block;
 }
 
-
-/* App Section */
+/* styles for the app section */
 .app-section {
-  padding: 80px 20px;
-  background-color: #EEF2FF;
-  position: relative;
-  overflow: hidden;
-}
-
-.app-container {
-  max-width: 1440px;
-  margin: 0 auto;
   display: flex;
-  flex-wrap: wrap;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 64px 112px;
+  gap: 10px;
+  width: 100%;
+  max-width: 1440px;
+  height: auto;
+  background: #EEF2FF;
+  margin: 0 auto;
+}
+
+/* Container for content and images */
+.app-container {
+  display: flex;
+  flex-direction: row;
   align-items: center;
-  justify-content: space-between;
-  gap: 40px;
+  padding: 0;
+  gap: 96px;
+  width: 100%;
+  max-width: 1216px;
+  height: auto;
+  margin: 0 auto;
 }
 
+/* Content area */
 .app-content {
-  flex: 1 1 500px;
-  max-width: 600px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 0;
+  gap: 48px;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
 }
 
-/* Images container */
-.app-images {
-  flex: 1 1 400px;
-  position: relative;
-  min-height: 550px;
+/* Inner content frame */
+.app-content-inner {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding: 0;
+  gap: 24px;
+  width: 100%;
+  max-width: 560px;
+  height: auto;
 }
 
-/* FIRST image */
-.first-image {
-  position: absolute;
-  left: -150px;
-  bottom: 0;
-  width: 270px;
-  z-index: 1;
-}
-
-/* SECOND image */
-.second-image {
-  position: absolute;
-  right: 200px;
-  top: -80px;
-  width: 220px;
-  z-index: 1;
-}
-
-/* Content styles */
 .app-title {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
-  color: #0F172A;
+  width: 100%;
+  max-width: 560px;
+  height: 44px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: normal;
+  font-weight: 800;
+  font-size: 36px;
+  line-height: 44px;
+  letter-spacing: -0.014em;
+  color: #1E293B;
 }
 
 .app-description {
-  font-size: 1.1rem;
-  margin-bottom: 30px;
+  width: 100%;
+  max-width: 560px;
+  height: 87px;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 18px;
+  line-height: 160%;
   color: #475569;
 }
 
+/* Buttons */
 .app-buttons {
   display: flex;
-  gap: 20px;
-  flex-wrap: wrap;
+  flex-direction: row;
+  align-items: flex-start;
+  padding: 0;
+  gap: 16px;
+  width: 273px;
+  height: 48px;
 }
 
 .store-button {
-  display: inline-block;
-  padding: 14px 24px;
-  border-radius: 50px;
-  font-weight: 600;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  padding: 12px 20px;
+  gap: 10px;
+  height: 48px;
+  min-height: 48px;
+  border-radius: 1234px;
   text-decoration: none;
-  transition: all 0.3s ease;
+  font-family: 'Plus Jakarta Sans', sans-serif;
+  font-style: normal;
+  font-weight: 700;
+  font-size: 16px;
+  line-height: 22px;
+  letter-spacing: -0.007em;
+  transition: background-color 0.3s;
 }
 
 .learn-more {
-  color: #6366F1;
-  border: 2px solid #6366F1;
+  width: 130px;
+  border: 1px solid #4F46E5;
+  color: #4F46E5;
 }
 
 .learn-more:hover {
-  background-color: #6366F1;
-  color: #fff;
+  background: #4F46E5;
+  color: #FFFFFF;
 }
 
 .get-started {
-  background: linear-gradient(90deg, #6366F1 0%, #8B5CF6 100%);
-  color: white;
+  width: 131px;
+  background: #4F46E5;
+  color: #FFFFFF;
 }
 
-/* Enhanced Responsive */
-@media (max-width: 343px) {
-  .first-image {
-    left: px;
-  }
-  .second-image {
-    right: 100px;
-  }
+.get-started:hover {
+  background: #4338CA;
 }
 
-@media (max-width: 162px) {
-  .first-image {
-    left: -50px;
+/* Image container */
+.app-images {
+  position: relative;
+  width: 560px;
+  height: 400px; 
+  margin: 0 auto;
+}
+
+/* First mockup image */
+.first-image img {
+  position: absolute;
+  width: 290px; 
+  height: 570px; 
+  left: 400px;
+  top: -150px;
+  
+}
+
+/* Second mockup image */
+.second-image img {
+  position: absolute;
+  width: 480px; 
+  height: 770px; 
+  right: 100px; 
+  bottom: -280px;
+  
+}
+
+/* Responsive adjustments */
+@media (max-width: 1200px) {
+  .app-section {
+    padding: 40px 60px;
   }
-  .second-image {
-    right: -150px;
-    top: -40px;
+
+  .app-container {
+    gap: 60px;
   }
 }
 
@@ -1747,30 +1803,49 @@ p.subheading {
   .app-container {
     flex-direction: column;
     text-align: center;
+    gap: 40px;
+  }
+
+  .app-content {
+    max-width: 100%;
+    align-items: center;
+  }
+
+  .app-content-inner {
+    align-items: center;
+  }
+
+  .app-title,
+  .app-description {
+    max-width: 100%;
   }
 
   .app-images {
-    min-height: auto;
-    margin-bottom: 30px;
+    height: auto;
+    width: 100%;
+    max-width: 400px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
   }
 
-  .first-image {
-    position: relative !important;
-    left: 0 !important;
-    transform: none !important;
-    top: 0 !important;
-    margin: 0 auto 20px;
-    width: 200px !important;
+  .first-image img {
+    position: relative;
+    left: auto;
+    top: auto;
+    width: 150px; 
+    height: auto;
+    margin: 0;
   }
 
-  .second-image {
-    position: relative !important;
-    left: 0 !important;
-    right: 0 !important;
-    top: 0 !important;
-    margin: 0 auto;
-    width: 180px !important;
-    z-index: 0;
+  .second-image img {
+    position: relative;
+    right: auto;
+    bottom: auto;
+    width: 150px;
+    height: auto;
+    margin: 0;
   }
 
   .app-buttons {
@@ -1780,19 +1855,65 @@ p.subheading {
 
 @media (max-width: 576px) {
   .app-section {
-    padding: 40px 15px;
+    padding: 30px 20px;
   }
 
   .app-title {
-    font-size: 2rem;
+    font-size: 28px;
+    line-height: 36px;
+    height: auto;
+  }
+
+  .app-description {
+    font-size: 16px;
+    height: auto;
   }
 
   .store-button {
     width: 100%;
     text-align: center;
   }
+
+  .app-images {
+    max-width: 300px;
+  }
+
+  .first-image img,
+  .second-image img {
+    width: 120px;
+    height: auto;
+  }
 }
 
+@media (max-width: 343px) {
+  .app-images {
+    max-width: 250px;
+  }
+
+  .first-image img,
+  .second-image img {
+    width: 100px;
+    height: auto;
+  }
+}
+
+@media (max-width: 162px) {
+  .app-images {
+    max-width: 200px;
+  }
+
+  .first-image img,
+  .second-image img {
+    width: 80px;
+    height: auto;
+  }
+}
+
+/* Footer adjustment*/
+footer {
+  position: relative; 
+  z-index: 0; 
+}
 /* Footer Styles */
 .footer-section {
   padding: 96px 112px;
