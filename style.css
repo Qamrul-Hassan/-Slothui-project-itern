@@ -36,8 +36,6 @@ body {
   justify-content: center;
 }
 
-
-
 .nav-left .logo-img {
   height: 45px;
 }
@@ -65,7 +63,7 @@ body {
 }
 
 .nav-menu li a:hover {
-  color: #6C63FF;
+  color: rgba(79, 70, 229, 1);
 }
 
 .nav-buttons {
@@ -276,7 +274,7 @@ body {
 .first-subheading {
   font-size: 14px;
   font-weight: 600;
-  color: #4F46E5;
+  color: rgba(79, 70, 229, 1);
   background: #EEF2FF;
   padding: 6px 12px;
   border-radius: 1234px;
@@ -452,7 +450,7 @@ p.hero {
 }
 p.suubheading {
   font-size: 0.9rem; 
-  color: #007bff; 
+  color: rgba(79, 70, 229, 1); 
   text-align: center; 
   margin-bottom: 10px;
   font-weight: bold;
@@ -512,7 +510,7 @@ p.suubheading {
 }
 
 .feature-item i {
-  color: #007bff; 
+  color: rgba(79, 70, 229, 1); 
   margin-bottom: 15px;
 }
 
@@ -685,7 +683,7 @@ p.suubheading {
 
 .who-is-it-for {
   font-size: 0.9rem;
-  color: #007bff;
+  color: rgba(79, 70, 229, 1);
   font-weight: bold;
   margin-bottom: 10px;
   display: inline-flex;
@@ -900,7 +898,7 @@ p.subheading {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #4F46E5;
+  color: rgba(79, 70, 229, 1);
   display: inline-block;
   display: inline-flex; 
   justify-content: center;
@@ -1166,7 +1164,7 @@ p.subheading {
   font-weight: 600;
   font-size: 14px;
   line-height: 20px;
-  color: #4F46E5;
+  color: rgba(79, 70, 229, 1);
   display: inline-block; /* Ensures single line */
 }
 
@@ -1214,7 +1212,7 @@ p.subheading {
 }
 
 .office-icon {
-  color: #4F46E5;
+  color: rgba(79, 70, 229, 1);
   font-size: 24px;
   margin-bottom: 24px;
 }
@@ -1272,7 +1270,7 @@ p.subheading {
   color: #222;
 }
 
-/* FAQ Section */
+
 .faq-wrapper {
   background-color: rgba(248, 250, 252, 1);
   padding: 80px 20px;
@@ -1288,7 +1286,7 @@ p.subheading {
 .faq-label {
   display: inline-block;
   background-color:rgba(238, 242, 255, 1); /* Fixed: removed '#' */
-  color: ;
+  color:rgba(79, 70, 229, 1) ;
   padding: 5px 15px;
   border-radius: 9999px;
   font-weight: bold;
